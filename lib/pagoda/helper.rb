@@ -9,7 +9,7 @@ module Shwedagon
         original_stdout = $stdout
         $stdout = File.new('/tmp/null.txt', 'w')
 
-        config  = Jekyll.configuration({'source' => cloned_repo_path})
+        config  = Jekyll.configuration({'source' => cloned_repo_path + "/source"})
         @site   = Jekyll::Site.new(config)
         @site.read
 
