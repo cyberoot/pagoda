@@ -31,6 +31,8 @@ module Shwedagon
     def yaml_data(post_title)
       defaults = { 'title' => post_title,
         'layout' => 'post',
+        'date'  =>  DateTime.now.strftime('%Y-%m-%d %H:%M:%S %z'),
+        'categories' => 'general',
         'published' => false }
 
       defaults = defaults.merge(default_yaml())
